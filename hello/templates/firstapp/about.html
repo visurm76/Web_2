@@ -1,9 +1,7 @@
-{% extends "firstapp/base.html %}
+{% extends "firstapp/base.html" %}
 {% block title %}about{% endblock title %}
 {% block header %}Сведения о компании{% endblock header %}
 {% block content %}
-
-<p>Интеллектуальные программные системы</p>
-<p>Связка шаблонов about.html и base.html</p>
-
+<p>Год в виде 4 цифр {% now "Y" %}</p>
+<p>Год в виде 2 цифр {% now "y" %}</p>
 {% endblock content %}
