@@ -12,8 +12,8 @@ def index(request):
 """__________Статичные файлы_______________________"""
 
 def index(request):
-    data = {"age": 66}
-    return render(request, "firstapp/index.html", context=data)
+    cat = ["Ноутбук", "Принтеры", "Сканеры"]
+    return render(request, "firstapp/index.html", context={"cat": cat})
 
 def about(request):
     return render(request, "firstapp/about.html")
