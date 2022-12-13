@@ -1,7 +1,9 @@
 {% extends "firstapp/base.html" %}
+{% load static %}
 {% block title %}about{% endblock title %}
 {% block header %}Сведения о компании{% endblock header %}
 {% block content %}
 <p>Год в виде 4 цифр {% now "Y" %}</p>
 <p>Год в виде 2 цифр {% now "y" %}</p>
+<img src="{% static 'images/image1.jpg' %}">
 {% endblock content %}
