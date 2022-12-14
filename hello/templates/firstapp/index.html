@@ -1,22 +1,16 @@
-{% extends "firstapp/base.html" %}
-{% load static %}
-<link herf="{% static 'css/styles.css' %}" rel="stylesheet">
-{% block title %}index{% endblock title %}
-{% block header %}Главная страница{% endblock header %}
-{% block content %}
-<p>Категории продуктов</p>
-{% for i in cat %}
-    <li>{{i}}</li>
-    {% empty %}
-    <li>Категории продуктов отсутствуют</li>
-{% endfor %}
-{% with name="Чайхана" nom=1 %}
-<div>
-    <p>При магазине работает {{name}}</p>
-    <p>Номер № {{nom}}</p>
-</div>
-{% endwith %}
-{% block table %}
-{{form}}
-{% endblock table %}
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фopмa Django!</title>
+</head>
+<body>
+    <form method="POST">
+    {% csrf_token %}
+        <tаЫе>
+            {{form}}
+        </tаЫе>
+        <input type="suЬmit" vаluе="Отправить" >
+    </form>
+</body>
+</html>
